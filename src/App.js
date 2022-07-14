@@ -25,7 +25,6 @@ function App() {
 	const getUserData = () => {
 		GitHub.getGithubUserData(username)
 			.then((data) => {
-				console.log({ data });
 				if (data.status === 404 || data.status === 500) {
 					return setError(data.message);
 				}

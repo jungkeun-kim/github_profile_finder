@@ -10,8 +10,6 @@ class GitHub {
 				`https://api.github.com/users/${username}?client_id=${this.clientID} &client_secret=${this.clientSecret}`
 			);
 
-			console.log({ response });
-
 			if (response.status === 200) {
 				return response.json();
 			} else if (response.status === 404) {
